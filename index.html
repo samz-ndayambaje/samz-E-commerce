@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMMART | Online Shopping</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+<header class="km-header">
+    <nav class="km-navbar">
+        <a href="#" class="km-logo">SAM<span>SMART.</span></a>
+
+        <div class="km-search">
+            <input type="text" id="searchInput"
+                placeholder="Search for products...">
+            <button onclick="searchProducts()">Search</button>
+        </div>
+
+        <div class="km-nav-links">
+            <a href="#home">Home</a>
+            <a href="./product.html">Products</a>
+            <a href="#categories">Categories</a>
+            <a href="#sell">Sell</a>
+        </div>
+
+        <button class="km-cart" onclick="showCart()">
+            🛒 Cart (<span id="cartCount">0</span>)
+        </button>
+    </nav>
+</header>
+
+<section class="km-hero" id="home">
+    <div class="km-hero-content">
+        <span class="km-tag">WELCOME TO SAMMART</span>
+
+        <h1>Everything You Need,<br>
+            <span>All In One Place.</span>
+        </h1>
+
+        <p>
+            Discover quality products, shop from trusted sellers
+            and enjoy convenient online shopping.
+        </p>
+
+        <div class="km-hero-buttons">
+            <a href="#products" class="km-primary-btn">Shop Now →</a>
+            <a href="#sell" class="km-outline-btn">Start Selling</a>
+        </div>
+    </div>
+</section>
+
+<section class="km-benefits">
+    <div>🚚 <span><b>Fast Delivery</b><small>Convenient shopping</small></span></div>
+    <div>🔒 <span><b>Secure Shopping</b><small>Shop with confidence</small></span></div>
+    <div>⭐ <span><b>Quality Products</b><small>Great shopping choices</small></span></div>
+    <div>🤝 <span><b>Trusted Sellers</b><small>Support local businesses</small></span></div>
+</section>
+
+
+<section class="km-section" id="categories">
+    <div class="km-section-heading">
+        <div>
+            <span class="km-small-title">EXPLORE OUR STORE</span>
+            <h2>Shop By Category</h2>
+        </div>
+    </div>
+
+    <div class="km-categories">
+        <a href="#products" class="km-category">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=500" alt="Fashion">
+            <h3>Fashion</h3>
+        </a>
+
+        <a href="#products" class="km-category">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" alt="Electronics">
+            <h3>Electronics</h3>
+        </a>
+
+        <a href="#products" class="km-category">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Shoes">
+            <h3>Shoes</h3>
+        </a>
+
+        <a href="#products" class="km-category">
+            <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500" alt="Bags">
+            <h3>Bags</h3>
+        </a>
+    </div>
+</section>
+
+
+<section class="km-section km-products-section" id="products">
+    <div class="km-section-heading">
+        <div>
+            <span class="km-small-title">OUR COLLECTION</span>
+            <h2>Popular Products</h2>
+        </div>
+        <a href="#products" class="km-view-all">View All →</a>
+    </div>
+
+    <div class="km-product-grid" id="productGrid">
+
+        <article class="km-product-card" data-name="Wireless Headphones">
+            <div class="km-product-image">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600" alt="Wireless headphones">
+                <span class="km-product-label">Popular</span>
+            </div>
+            <div class="km-product-info">
+                <small>Electronics</small>
+                <h3>Wireless Headphones</h3>
+                <div class="km-rating">★★★★★ <span>(4.8)</span></div>
+                <div class="km-product-bottom">
+                    <strong>RWF 35,000</strong>
+                    <button onclick="addToCart('Wireless Headphones',35000)">+</button>
+                </div>
+            </div>
+        </article>
+
+        <article class="km-product-card" data-name="Stylish Sneakers">
+            <div class="km-product-image">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600" alt="Sneakers">
+                <span class="km-product-label">New</span>
+            </div>
+            <div class="km-product-info">
+                <small>Fashion</small>
+                <h3>Stylish Sneakers</h3>
+                <div class="km-rating">★★★★★ <span>(4.9)</span></div>
+                <div class="km-product-bottom">
+                    <strong>RWF 28,000</strong>
+                    <button onclick="addToCart('Stylish Sneakers',28000)">+</button>
+                </div>
+            </div>
+        </article>
+
+        <article class="km-product-card" data-name="Ladies Handbag">
+            <div class="km-product-image">
+                <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600" alt="Handbag">
+            </div>
+            <div class="km-product-info">
+                <small>Accessories</small>
+                <h3>Ladies Handbag</h3>
+                <div class="km-rating">★★★★★ <span>(4.7)</span></div>
+                <div class="km-product-bottom">
+                    <strong>RWF 22,000</strong>
+                    <button onclick="addToCart('Ladies Handbag',22000)">+</button>
+                </div>
+            </div>
+        </article>
+
+        <article class="km-product-card" data-name="Smart Watch">
+            <div class="km-product-image">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600" alt="Smart watch">
+                <span class="km-product-label">Trending</span>
+            </div>
+            <div class="km-product-info">
+                <small>Electronics</small>
+                <h3>Smart Watch</h3>
+                <div class="km-rating">★★★★★ <span>(4.6)</span></div>
+                <div class="km-product-bottom">
+                    <strong>RWF 45,000</strong>
+                    <button onclick="addToCart('Smart Watch',45000)">+</button>
+                </div>
+            </div>
+        </article>
+
+    </div>
+    <p id="noProducts" class="km-no-products" hidden>No matching products found.</p>
+</section>
+
+
+<section class="km-seller" id="sell">
+    <div>
+        <span class="km-small-title">GROW YOUR BUSINESS</span>
+        <h2>Have Products to Sell?</h2>
+        <p>Join SAMMART and connect your products with customers.
+           Start growing your business online.</p>
+        <a href="register.html" class="km-primary-btn">Become a Seller →</a>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800"
+         alt="Online business owner">
+</section>
+
+
+<section class="km-newsletter">
+    <h2>Stay Updated With SAMMART</h2>
+    <p>Discover new products and exciting offers.</p>
+    <form onsubmit="subscribe(event)">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+    </form>
+</section>
+
+<footer class="km-footer">
+    <div>
+        <a href="#" class="km-logo">SAM<span>MART.</span></a>
+        <p>Your trusted online marketplace.</p>
+    </div>
+
+    <div>
+        <h3>Quick Links</h3>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#categories">Categories</a>
+    </div>
+
+    <div>
+        <h3>Customer Service</h3>
+        <a href="#sell">Become a Seller</a>
+        <a href="#contact">Contact Us</a>
+    </div>
+
+    <p class="km-copyright">
+        © 2026 SAMMART. All Rights Reserved.
+    </p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
